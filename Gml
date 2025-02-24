@@ -1,0 +1,4 @@
+STABLE_DIFFUSION_PROMPT = "A realistic man walking in a futuristic city, cinematic lighting, high detail, 4K"
+os.makedirs(GENERATED_FRAMES_PATH, exist_ok=True)
+stable_diffusion_command = f"python stable_diffusion.py --prompt '{STABLE_DIFFUSION_PROMPT}' --output {GENERATED_FRAMES_PATH}"
+subprocess.run(stable_diffusion_command, shell=True)
